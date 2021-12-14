@@ -5,7 +5,7 @@
             "strict_min_version": "57.0"
         }
     },
-    "author": "Sebastian Blask",
+    "author": "André Polomat",
     "background": {
         "scripts": [
             "browser-polyfill.js",
@@ -13,16 +13,16 @@
         ]
     },
     "commands": {
-        "open-new-tab-at-default-location": {
-            "description": "Open new tab at default location",
+        "open-new-tab-next-to-current": {
+            "description": "Open new tabs to the right of the current one",
             "suggested_key": {
                 "default": "Ctrl+Y",
                 "windows": "Ctrl+Shift+Y"
             }
         }
     },
-    "description": "Open new tabs to the right of the current one.",
-    "homepage_url": "https://github.com/sblask/webextension-open-tabs-next-to-current",
+    "description": "Open new tabs to the right of the current one using a shortcut.",
+    "homepage_url": "https://github.com/lapinozz/webextension-open-tabs-next-to-current",
     "icons": {
         "128": "icon-128x128.png",
         "16": "icon-16x16.png",
@@ -30,10 +30,10 @@
         "48": "icon-48x48.png",
         "64": "icon-64x64.png"
     },
-    "manifest_version": 2,
-    "name": "Open Tabs Next to Current",
+    "manifest_version": 1,
+    "name": "Open Tabs Next to Current (Shortcut)",
     "permissions": [
         "sessions"
     ],
-    "version": "2.0.14"
+    "version": "1"
 }

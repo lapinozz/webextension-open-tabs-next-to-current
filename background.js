@@ -34,13 +34,12 @@ initializeCurrentTabId();
 
 browser.tabs.onActivated.addListener(handleTabActivated);
 
-browser.tabs.onCreated.addListener(moveTab);
 browser.tabs.onRemoved.addListener(forgetTab);
 
 browser.commands.onCommand.addListener(function(command) {
-    if (command == "open-new-tab-at-default-location") {
-        browser.tabs.onCreated.removeListener(moveTab);
-        browser.tabs.onCreated.addListener(fixListeners);
+    if (command == "open-new-tab-next-to-current") {
+        browser.tabs.onCreated.addListener(moveTab);
+      //  browser.tabs.onCreated.addListener(fixListeners);
         browser.tabs.create({});
     }
 });
@@ -72,8 +71,8 @@ function addSessionKeyToExistingTabs() {
 }
 
 function fixListeners() {
-    browser.tabs.onCreated.removeListener(fixListeners);
-    browser.tabs.onCreated.addListener(moveTab);
+   // browser.tabs.onCreated.removeListener(fixListeners);
+   // browser.tabs.onCreated.removeListener(moveTab);
 }
 
 function moveTab(newTab) {
